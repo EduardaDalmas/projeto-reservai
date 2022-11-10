@@ -1,0 +1,10 @@
+CREATE TABLE usuarios (
+    id             INTEGER      PRIMARY KEY AUTOINCREMENT,
+    nome           TEXT (50)    NOT NULL,
+    sexo           TEXT (10),
+    email          TEXT (20),
+    senha          VARCHAR (60),
+    usoLocalizacao VARCHAR (3),
+    tipoUsuario    VARCHAR (20),
+    idade          DATE (3) 
+);
