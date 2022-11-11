@@ -10,17 +10,66 @@
   
   </head>
   <body>
-    <div class="conteudo">
-      <div class="texto">
-        <h1><%= title %></h1>
-        <h3 style="text-align: center;">O <%= title %> lhe deseja boas-vindas</h3>
-
-        <p style="margin-top: 5%; text-align: center;" >
-          <a href="/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Estabelecimentos</a>
-          <a href="/usuarios" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Usuários</a>  
-        </p>
-      </div>
+    <div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Restaurantes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/usuarios">Cadastre-se</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Entrar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
-    
+    <header class="jumbo">
+      <h1 style="text-align: center;">Encontre bares e restaurantes</h1><br>
+      <form class="d-flex search" style="max-width: 50%;" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-dark" type="submit">Buscar</button>
+      </form>
+    </header><br><br>
+
+    <div class="row locais">
+      <div class="card col-4" style="width: 18rem;">
+        <img src="/assets/jantar-a-dois.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Catena room</h5>
+          <p class="card-text">Lugar chique para um jantar a dois.</p>
+          <a href="#" class="btn btn-dark">Reservar</a>
+        </div>
+      </div>
+  
+      <div class="card col-4" style="width: 18rem;">
+        <img src="/assets/aniversario.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">FatBull Tap House</h5>
+          <p class="card-text">Ideal para curtir as festas com os amigos</p>
+          <a href="#" class="btn btn-dark">Reservar</a>
+        </div>
+      </div>
+
+      <div class="card col-4" style="width: 18rem;">
+        <img src="/assets/local.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Outback</h5>
+          <p class="card-text">Para criar memórias afetivas com a família</p>
+          <a href="#" class="btn btn-dark">Reservar</a>
+        </div>
+      </div>
+
+      
+    </div>
+   
   </body>
 </html>
