@@ -9,6 +9,9 @@ var indexRouter = require('./routes/index');
 // instancia rota de usuarios
 var usuariosRouter = require('./routes/usuarios');
 
+// instancia rota de reservas
+var reservasRouter = require('./routes/reservas');
+
 // instancia classe de conexão com o banco de dados
 var DBConn = require('./db-conn.js');
 
@@ -31,6 +34,9 @@ app.use('/', indexRouter);
 
 // declara caminho/uri da rota de usuarios
 app.use('/usuarios', usuariosRouter);
+
+// declara caminho/uri da rota de reservas
+app.use('/reservas', reservasRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
