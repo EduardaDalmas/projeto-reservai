@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -11,9 +10,18 @@ body {
   
 }
 
-.texto{
-  margin-left: 30px;;
+.card-img-top{
+  width: 200px;
+  height: 250px;
 }
+
+.search{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto; 
+  
+}
+
 
 .conteudo-form{
   width: 50%;
@@ -21,10 +29,6 @@ body {
   margin-left: auto;
   margin-right: auto; 
   
-}
-
-.texto-form{
- 
 }
 
 .table{
@@ -42,4 +46,40 @@ h1{
 
 a {
   color: #00B7FF;
+}
+
+img{ filter: opacity()}
+
+
+.jumbo {
+  background-image: url('../assets/familia.png');
+  height: 550px;
+  background-position: right center;
+  background-size: cover;
+  border-top: 1px solid transparent;
+  color:rgb(255, 255, 255);
+  text-align: center;
+  padding: 120px;
+}
+
+.jumbo h1 {
+  font-size: 2.7rem;
+  font-weight: bold;
+}
+
+.jumbo p {
+  background-color: rgba(227, 196, 233, 0.81);
+  display: inline-block;
+  padding: 0.5rem;
+  border-bottom: 2px solid rgb(251, 251, 251);
+}
+
+.locais {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.card {
+  margin: 30px;
 }
