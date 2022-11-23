@@ -31,9 +31,14 @@
 
             <form action="/reservas/" method="POST">
              
+
+              <div class="form-group col-md-4">
+                <input type="hidden" class="form-control" name="estabelecimento" id="estabelecimento" value="<%= estabelecimento.id_estabelecimento %>">
+              </div>
+
               <div class="form-group col-md-4">
                 <label for="email">E-mail:</label>
-                <input type="text" class="form-control" name="email" id="email" placeholder="Insira seu e-mail para registrar a reserva">
+                <input type="mail" class="form-control" name="email" id="email" placeholder="Insira seu e-mail para registrar a reserva">
               </div>
 
 
