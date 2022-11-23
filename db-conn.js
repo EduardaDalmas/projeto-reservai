@@ -86,7 +86,7 @@ class DBConn {
 
     getEstabelecimentoByName(razaosocial, callback){
         var raz = razaosocial;
-        var sql = "SELECT * FROM estabelecimentos WHERE razaosocial =  (?)  ";
+        var sql = "SELECT * FROM estabelecimentos WHERE razaosocial = (?) " ;
         return this.db.get(sql, [razaosocial], callback);
 
     }
