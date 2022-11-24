@@ -11,7 +11,6 @@ body {
 }
 
 .card-img-top{
-  width: 200px;
   height: 250px;
 }
 
@@ -59,6 +58,14 @@ img{ filter: opacity()}
   color:rgb(255, 255, 255);
   text-align: center;
   padding: 120px;
+}
+
+.background_form {
+  background-image: url('../assets/back_form.png');
+  background-position: right center;
+  background-size: cover;
+  border-top: 1px solid transparent;
+  background-repeat: no-repeat;
 }
 
 .jumbo h1 {
