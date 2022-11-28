@@ -34,24 +34,21 @@
     </div>
     <br><br>
       <div class="texto-form">
-        <% if (typeof(errors) !="undefined" ) { %>
-          <div style="color: red; border: 1px solid red;">
-            <ul>
-              <% for(var i=0; i < errors.length; i++) { %>
-                <li>
-                  <%= errors[i] %>
-                </li>
-                <% } %>
-            </ul>
-          </div>
-        <% } %>
-
         <div class="row">
-          
           <div class="col-md-4"></div>
           <div class="col-md-4" style="background-color: white; border-radius: 15px;">
             <h1>Nova reserva</h1>
-
+            <% if (typeof(errors) !="undefined" ) { %>
+              <div style="color: red; border: 1px solid red; background-color: white;">
+                <ul>
+                  <% for(var i=0; i < errors.length; i++) { %>
+                    <li>
+                      <%= errors[i] %>
+                    </li>
+                    <% } %>
+                </ul>
+              </div>
+            <% } %>
             <form action="/reservas/" method="POST">
 
               <div class="form-group">

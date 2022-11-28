@@ -98,6 +98,15 @@ class DBConn {
     }
 
 
+    getReservaByEmail(usuario, callback){
+       //var sql = "SELECT * FROM agendamentos WHERE usuario = (?) ";
+    var sql = "SELECT agendamentos.usuario, agendamentos.data, agendamentos.time, estabelecimentos.razaosocial FROM agendamentos INNER JOIN estabelecimentos ON agendamentos.estabelecimento = estabelecimentos.id_estabelecimento WHERE agendamentos.usuario = (?)";
+        //return this.db.all(sql, [], callback);
+       return this.db.all(sql, [usuario], callback);
+
+    }
+
+
 }
 
 module.exports = DBConn

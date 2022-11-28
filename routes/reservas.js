@@ -15,7 +15,8 @@ router.get('/', function(req, res, next) {
   
   db.findAllReservas((err, data) =>{
       res.render('reservas/', { reservas: data});
-  
+      console.log(data);
+
     });
 
 }); 
@@ -32,9 +33,11 @@ router.get('/buscar/', function(req, res, next) {
         next(err);
       }
       else if (data){
-        res.render('reservas/restaurantes', {restaurantes: data});
+        res.render('reservas/restaurantes', {restaurantes: data, tipo: "estabelecimento"});
       } else{
-        res.status(404).send("Restaurante não encontrado");
+       // res.status(404).send("Restaurante não encontrado");
+        res.render('reservas/restaurantes', {restaurantes: false, tipo: "estabelecimento"});
+
       }
     
      });
@@ -43,7 +46,18 @@ console.log(req.query.busca);
  });
 
 
+/*  buscar reservas por email. */
+router.get('/buscarreserva/', function(req, res, next) {
+    db.getReservaByEmail(req.query.busca_email, (err, data) => {
+  
+        res.render('reservas/restaurantes', {restaurantes: data, tipo: "agendamento"});
+        console.log(data);
 
+     
+    
+     });
+  
+ });
 
 
 

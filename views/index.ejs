@@ -3,13 +3,14 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8"/>
      <!-- CSS only -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
      <!-- JavaScript Bundle with Popper -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   
   </head>
-  <body>
+  <body style="max-width: 99%;">
     <div>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -26,7 +27,7 @@
                 <a class="nav-link" href="#locais">Restaurantes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/usuarios">Cadastre-se</a>
+                <a class="nav-link" href="/usuarios/novo">Cadastre-se</a>
               </li>
             </ul>
           </div>
@@ -36,7 +37,7 @@
     <header class="jumbo">
       <h1 style="text-align: center;">Encontre bares e restaurantes</h1><br>
       <form class="d-flex search" action="/reservas/buscar/" style="max-width: 50%;" role="search">
-        <input class="form-control me-2" name="busca" id="busca" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" name="busca" id="busca" type="search" placeholder="Pesquisar" aria-label="Search">
         <button class="btn btn-dark" type="submit">Buscar</button>
       </form>
     </header><br><br>
@@ -71,6 +72,44 @@
 
       
     </div>
+    <br><br>
+    <div class="row consultar">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <h1 style="text-align: center;">Localize suas reservas</h1>
+        <h4 style="text-align: center;">Através do seu e-mail cadastrado</h4><br>
+
+        <form class="d-flex search" action="/reservas/buscarreserva/" style="max-width: 50%;" role="search">
+          <input class="form-control me-2" name="busca_email" id="busca_email" type="mail" placeholder="E-mail" aria-label="Search">
+          <button class="btn btn-dark" type="submit">Buscar</button>
+        </form>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
    
+    <div class="row"><br><br><br><br></div>
+    <footer class="footer-07">
+      <div class="container">
+      <div class="row justify-content-center">
+      <div class="col-md-12 text-center">
+      <h2 class="footer-heading"><p href="#" class="logo">reservairestaurantes.com</p></h2>
+      <p class="menu">
+      <a href="../">Home</a>
+      <a href="#locais">Restaurantes</a>
+      <a href="/usuarios/novo">Cadastre-se</a>
+      <a href="#consultar">Consultar agendamento</a>
+
+     
+      </div>
+      </div>
+      <div class="row mt-5">
+      <div class="col-md-12 text-center">
+      <p class="copyright">
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Reservaí - Bom gosto, preço justo <i class="ion-ios-heart" aria-hidden="true"></i> </a>
+      </p>
+      </div>
+      </div>
+      </div>
+      </footer>
   </body>
 </html>
