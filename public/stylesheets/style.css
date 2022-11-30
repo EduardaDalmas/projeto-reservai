@@ -48,6 +48,10 @@ a {
 
 img{ filter: opacity()}
 
+* {
+overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 
 .jumbo {
   background-image: url('../assets/familia.png');
@@ -61,6 +65,7 @@ img{ filter: opacity()}
 }
 
 .background_form {
+  height: 100vh;
   background-image: url('../assets/back_form.png');
   background-position: right center;
   background-size: cover;
